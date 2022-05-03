@@ -1,0 +1,401 @@
+$bg: '%BG%';
+$font: '%FONT%';
+
+$background-color: rgb(255, 255, 255);
+$border-color: rgb(230, 236, 240);
+$text-color: rgb(20, 23, 26);
+$twitter-color: rgba(29, 161, 242, 1.00);
+$info-color: rgba(128, 128, 128, 1);
+$href-color: rgb(15, 121, 254);
+$gray-color: rgb(204, 214, 221);
+$poll-top-color: rgb(113, 201, 248);
+@if $bg == 'dim' {
+    $background-color: rgb(21, 32, 43);
+    $border-color: rgb(56, 68, 77);
+    $text-color: rgb(255, 255, 255);
+    $info-color: rgb(136, 153, 166);
+    $gray-color: rgb(61, 84, 102);
+} @else if $bg == 'lights-out' {
+    $background-color: rgb(0, 0, 0);
+    $border-color: rgb(47, 51, 54);
+    $text-color: rgba(217, 217, 217, 1.00);
+    $info-color: rgb(110, 118, 125);
+    $gray-color: rgb(47, 51, 54);
+}
+
+a {
+    color: $href-color;
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+article{
+    font-family: 'Helvetica,sans-serif';
+}
+
+article.main {
+    width: 598px;
+    background-color: $background-color;
+    border: {
+        width: 1px;
+        style: solid;
+        color: $border-color;
+    }
+    & > div {
+        width: 95%; 
+        max-width: 568px;
+        padding: 0 15px;
+        & > header {
+            height: auto;
+            width: 100%;
+            margin: 10px 0 15px 0;
+            & > a {
+                display: inline-flex;   
+                width: 100%;
+                & > div {
+                    float: left;
+                }
+                & > .profile_image {
+                    margin-right: 10px;
+                    & > img {
+                        width: 49px;
+                        height: 49px;
+                        border-radius: 50%;
+                    }
+                }
+                & > .profile {
+                    width: 100%;
+                    margin: 0;
+                    & > div {
+                        & > div {
+                            & > div {
+                                display: inline-block;
+                            }
+                            & > .name {
+                                font: {
+                                    size: 16px;
+                                    weight: bold;
+                                }
+                                color: $text-color;
+                            }
+                            & > .verified {
+                                margin-left: 2px;
+                                vertical-align: text-bottom;
+                                width: 18.75px;
+                                height: 18.75px;
+                                & > svg {
+                                    color: if($bg == 'default', $twitter-color, $text-color);
+                                    fill: currentcolor;
+                                }
+                            }
+                        }
+                        & > .username {
+                            font-size: 14px;
+                            font-weight: 400;
+                            color: $info-color;
+                            line-height: 19.3px;
+                        }
+                    }
+                }
+                & > .logo {
+                    display: block;
+                    float: right;
+                    margin-top: 2px;
+                }
+            }
+        }
+        & > div.body {
+            margin-top: 15px;
+            font-size: 15px;
+            width: 100%;
+            color: $text-color;
+            line-height: 1.7;
+            white-space: pre-wrap;
+            padding-bottom: 10px;
+        }
+        & > article.include {
+            width: 100%; 
+            max-width: 566px;
+            margin-top: 10px;
+            border: {
+                width: 0px;
+                style: solid;
+                color: $gray-color;
+                radius: 15px;
+            }
+            overflow: hidden;
+            & > * {
+                vertical-align: bottom;
+            }
+            & > .image_1 {
+                display: block;
+                & > img {
+                    width: 100%;
+                    vertical-align: bottom;
+                }
+            }
+            & > .image_2 {
+                display: block;
+                height: 318.375px;
+                & > div {
+                    width: 282px;
+                    height: 100%;
+                    display: inline-block;
+                    &:first-child {
+                        margin-right: 2px;
+                    }
+                    & img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        object-position: center;
+                        vertical-align: bottom;
+                    }
+                }
+            }
+            & > .image_3 {
+                display: block;
+                height: 318.375px;
+                & > div {
+                    width: 282px;
+                    height: 100%;
+                    display: inline-block;
+                    &:first-child {
+                        margin-right: 2px;
+                    }
+                    &:last-child {
+                        & > div {
+                            width: 100%;
+                            height: calc(50% - 1px);
+                            display: inline-block;
+                        }
+                        & > div:first-child {
+                            margin-bottom: 2px;
+                        }
+                    }
+                    & img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        object-position: center;
+                        vertical-align: bottom;
+                    }
+                }
+            }
+            & > .image_4 {
+                display: block;
+                height: 318.375px;
+                & > div {
+                    width: 282px;
+                    height: 100%;
+                    display: inline-block;
+                    &:first-child {
+                        margin-right: 2px;
+                        & > div {
+                            width: 100%;
+                            height: calc(50% - 1px);
+                            display: inline-block;
+                        }
+                        & > div:first-child {
+                            margin-bottom: 2px;
+                        }
+                    }
+                    &:last-child {
+                        & > div {
+                            width: 100%;
+                            height: calc(50% - 1px);
+                            display: inline-block;
+                        }
+                        & > div:first-child {
+                            margin-bottom: 2px;
+                        }
+                    }
+                    & img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        object-position: center;
+                        vertical-align: bottom;
+                    }
+                }
+            }
+            & > .video {
+                display: block;
+                position: relative;
+                & > img {
+                    width: 100%;
+                    vertical-align: bottom;
+                }
+                & > .play {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+            & > .tweet {
+                display: none;
+                padding: 10px;
+                & > header {
+                    height: 20px;
+                    & > div {
+                        float: left;
+                    }
+                    & > .profile_image {
+                        margin-right: 5px;
+                        & > img {
+                            width: 20px;
+                            height: 20px;
+                            border-radius: 50%;
+                        }
+                    }
+                    & > .profile {
+                        & > div {
+                            float: left;
+                        }
+                        & > .name {
+                            font-size: 15px;
+                            font-weight: bold;
+                            color: $text-color;
+                        }
+                        & > .verified {
+                            margin-left: 2px;
+                            vertical-align: text-bottom;
+                            width: 18.75px;
+                            height: 18.75px;
+                            & > svg {
+                                color: $twitter-color;
+                                fill: currentcolor;
+                            }
+                        }
+                        & > .username {
+                            font-size: 15px;
+                            margin-left: 5px;
+                            color: $info-color;
+                        }
+                        & > .date {
+                            font-size: 15px;
+                            color: $info-color;
+                        }
+                    }
+                }
+                & > main {
+                    margin-top: 5px;
+                    font-size: 15px;
+                    color: $text-color;
+                    line-height: 1.7;
+                    white-space: pre-wrap;
+                    & > footer {
+                        color: $href-color;
+                        margin-top: 5px;
+                    }
+                }
+            }
+        }
+        & > article.poll_open {
+            width: 568px;
+            margin-top: 10px;
+            & > a {
+                display: block;
+                width: 536px;
+                height: 20px;
+                padding: 4px 15px;
+                border: {
+                    style: solid;
+                    color: $twitter-color;
+                    width: 1px;
+                    radius: 14px;
+                }
+                font: {
+                    weight: bold;
+                    size: 15px;
+                }
+                text-align: center;
+                color: $twitter-color;
+                margin-top: 5px;
+                &:first-child {
+                    margin-top: 0;
+                }
+            }
+            & > div {
+                margin-top: 10px;
+                font-size: 15px;
+                color: $info-color;
+            }
+        }
+        & > article.poll_closed {
+            width: 568px;
+            margin-top: 10px;
+            & > a {
+                display: block;
+                position: relative;
+                height: 30px;
+                margin-top: 5px;
+                &:first-child {
+                    margin-top: 0;
+                }
+                & > div.label {
+                    position: absolute;
+                    top: 5px;
+                    left: 10px;
+                    font: {
+                        size: 15px;
+                    }
+                    color: $text-color;
+                    z-index: 10;
+                }
+                & > div.percent {
+                    position: absolute;
+                    top: 5px;
+                    right: 0px;
+                    font: {
+                        size: 15px;
+                    }
+                    color: $text-color;
+                    z-index: 10;
+                }
+                & > div.bg {
+                    height: 30px;
+                    position: absolute;
+                    border-radius: 5px;
+                    background-color: $gray-color;
+                    z-index: 0;
+                }
+            }
+            & > a.top {
+                & > div.label {
+                    font: {
+                        weight: bold;
+                    }
+                }
+                & > div.percent {
+                    font: {
+                        weight: bold;
+                    }
+                }
+                & > div.bg {
+                    background-color: $poll-top-color;
+                }
+            }
+            & > div {
+                margin-top: 10px;
+                font-size: 15px;
+                color: $info-color;
+            }
+        }
+        & > footer {
+            margin: 15px 0;
+            color: $info-color;
+            font-size: 15px;
+            width: 100%;
+            padding-top: 10px;
+            border-top: 1px solid #e6ecf0;
+            & > b {
+                color: black;
+                font-size: 14px;
+            }
+        }
+    }
+}
